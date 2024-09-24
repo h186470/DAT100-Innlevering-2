@@ -6,7 +6,7 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 		int tabellSomSkrives[] = tabell;
 		
-		for(int i = 0; i < tabell.length; i++) {
+		for(int i = 0; i < tabellSomSkrives.length; i++) {
 			System.out.println("Index: " + i + " er: "+ tabellSomSkrives[i]);
 		}
 	}
@@ -20,9 +20,15 @@ public class Tabeller {
 
 	// c)
 	public static int summer(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int tabellSomSkrives[] = tabell;
+		int total = 0;
+		
+		for(int i = 0; i < tabellSomSkrives.length; i++) {
+			int num = tabellSomSkrives[i];
+			total = total + num;
+		}
+		
+		return total;
 	}
 
 	// d)
