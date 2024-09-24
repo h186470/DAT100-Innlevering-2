@@ -41,9 +41,16 @@ public class Tabeller {
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
+		int tabellSomSkrives[] = tabell;
+		int num = tall;
+		int posisjon = -1;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		for (int i = 0; i < tabellSomSkrives.length; i++) {
+			if (tabellSomSkrives[i] == num) {
+				posisjon = i;
+			}
+		}
+		return posisjon;
 	}
 
 	// f)
