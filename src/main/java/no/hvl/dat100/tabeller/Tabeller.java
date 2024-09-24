@@ -28,11 +28,11 @@ public class Tabeller {
 
 	// c)
 	public static int summer(int[] tabell) {
-		int tabellSomSkrives[] = tabell;
+		int tabellSomSjekkes[] = tabell;
 		int total = 0;
 		
-		for(int i = 0; i < tabellSomSkrives.length; i++) {
-			int num = tabellSomSkrives[i];
+		for(int i = 0; i < tabellSomSjekkes.length; i++) {
+			int num = tabellSomSjekkes[i];
 			total = total + num;
 		}
 		
@@ -56,12 +56,12 @@ public class Tabeller {
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
-		int tabellSomSkrives[] = tabell;
+		int tabellSomSjekkes[] = tabell;
 		int num = tall;
 		int posisjon = -1;
 
-		for (int i = 0; i < tabellSomSkrives.length; i++) {
-			if (tabellSomSkrives[i] == num) {
+		for (int i = 0; i < tabellSomSjekkes.length; i++) {
+			if (tabellSomSjekkes[i] == num) {
 				posisjon = i;
 			}
 		}
@@ -84,9 +84,16 @@ public class Tabeller {
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		int tabellSomSjekkes[] = tabell;
+		boolean sortert = true;
+		int lengde = tabellSomSjekkes.length - 1;
+	
+		for (int i = 0; i < lengde; i++) {
+			if (tabellSomSjekkes[i] > tabellSomSjekkes[i + 1]) {
+				sortert = false;
+			} 
+		}
+		return sortert;
 	}
 
 	// h)
