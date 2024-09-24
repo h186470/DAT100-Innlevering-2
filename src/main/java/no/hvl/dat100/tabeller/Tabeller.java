@@ -98,9 +98,17 @@ public class Tabeller {
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
+		int lengde = tabell1.length + tabell2.length; 
+	    int[] sammenSatt = new int[lengde]; 
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
+	    for (int i = 0; i < tabell1.length; i++) {
+	        sammenSatt[i] = tabell1[i];
+	    }
 
+	    for (int i = 0; i < tabell2.length; i++) {
+	        sammenSatt[tabell1.length + i] = tabell2[i];
+	    }
+
+	    return sammenSatt;
 	}
 }
