@@ -4,10 +4,11 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
-
+		int tabellSomSkrives[] = tabell;
+		
+		for(int i = 0; i < tabell.length; i++) {
+			System.out.println("Index: " + i + " er: "+ tabellSomSkrives[i]);
+		}
 	}
 
 	// b)
