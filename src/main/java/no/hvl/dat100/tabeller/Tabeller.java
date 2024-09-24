@@ -62,9 +62,16 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
+		int initTabell[] = tabell;
+		int reversert[] = new int[tabell.length];
+		int tabellLengde = initTabell.length - 1;
+		int j = 0;
+		
+		for(int i = tabellLengde; i >=0; i--) {
+			reversert[j] = initTabell[i];
+			j++;
+		}
+		return reversert;
 	}
 
 	// g)
