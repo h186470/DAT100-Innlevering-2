@@ -82,9 +82,19 @@ public class Matriser {
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
+		int m = a.length;
+		int N = a[0].length;
+		int n = b[0].length;
+		
+		int result[][] = new int[m][n];
 	
+		for(int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				for (int k = 0; k < N; k++) {
+					result[i][j] += a[i][k] * b[k][j];
+				}
+			}
+		}
+		return result;
 	}
 }
